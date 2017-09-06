@@ -66,18 +66,6 @@ function calculateBombardierSales(company) {
 var bombardierSales = calculateBombardierSales(companySalesData[1])
 
 
-//
-//function calculateSalesTax(telusBC, telusSK, bombardier, salesTax) {
-//  var salesTaxAB = 0
-//  var salesTaxBC = 0
-//  var salesTaxSK = 0
-//  telusBC * salesTaxRates[1]
-//  telusAB * salesTaxRates[2]
-//}
-//
-//var totalTaxPaid = calculateSalesTax(telusSalesBC, telusSalesSK, bombardierSales, salesTax)
-////
-
 var telusTaxPaidBC = telusSalesBC * salesTaxRates.BC
 var telusTaxPaidSK = telusSalesSK * salesTaxRates.SK
 var telusTotalTaxPaid = telusTaxPaidBC + telusTaxPaidSK
@@ -98,25 +86,3 @@ final.Bombardier.totalTaxes = bombardierTaxPaid
 
 console.log(final)
 
-
-//
-//
-//
-// function calculateSalesTax(salesData, taxRates) {
-//
-// }
-//
-// var results = calculateSalesTax(companySalesData, salesTaxRates);
-//
-// /* Expected Results:
-// {
-//   Telus: {
-//     totalSales: 1300
-//     totalTaxes: 144
-//   },
-//   Bombardier: {
-//     totalSales: 800,
-//     totalTaxes: 40
-//   }
-// }
-// */
