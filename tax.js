@@ -4,7 +4,8 @@ var salesTaxRates = {
   SK: 0.10
 };
 
-var telusSales = 0
+var telusSalesBC = 0
+var telusSalesSK = 0
 var bombardierSales = 0
 
 var companySalesData = [
@@ -41,14 +42,22 @@ function calculateTelusSales2(company) {
   return compSales
 }
 
-var telusSales = calculateTelusSales(companySalesData[0])
-telusSales = Number(telusSales)
-var telusSales2 = calculateTelusSales2(companySalesData[2])
-telusSales2 = Number(telusSales2)
+var companySales = {
+  
+}
 
-telusSales = telusSales + telusSales2
+var telusSalesBC = calculateTelusSales(companySalesData[0])
+telusSalesBC = Number(telusSalesBC)
 
-console.log(telusSales)
+var telusSalesSK = calculateTelusSales2(companySalesData[2])
+telusSalesSK = Number(telusSalesSK)
+
+var telusTotalSales = telusSalesBC + telusSalesSK
+
+
+console.log(telusSalesBC)
+console.log(telusSalesSK)
+console.log(telusTotalSales)
 
 function calculateBombardierSales(company) {
   var compSales = 0
@@ -61,12 +70,25 @@ function calculateBombardierSales(company) {
 var bombardierSales = calculateBombardierSales(companySalesData[1])
 
 console.log(bombardierSales)
-
-function calculateSalesTax(telus, bombardier, salesTax) {
-  
-}
-
 //
+//function calculateSalesTax(telusBC, telusSK, bombardier, salesTax) {
+//  var salesTaxAB = 0
+//  var salesTaxBC = 0
+//  var salesTaxSK = 0
+//  telusBC * salesTaxRates[1]
+//  telusAB * salesTaxRates[2]
+//}
+//
+//var totalTaxPaid = calculateSalesTax(telusSalesBC, telusSalesSK, bombardierSales, salesTax)
+////
+
+var telusTaxPaidBC = telusSalesBC * salesTaxRates.BC
+var telusTaxPaidSK = telusSalesSK * salesTaxRates.SK
+var telusTotalTaxPaid = telusTaxPaidBC + telusTaxPaidSK
+console.log(telusTotalTaxPaid)
+
+var bombardierTaxPaid = bombardierSales * salesTaxRates.AB
+console.log(bombardierTaxPaid)
 //
 //
 //
