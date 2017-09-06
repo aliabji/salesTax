@@ -55,11 +55,6 @@ telusSalesSK = Number(telusSalesSK)
 
 var telusTotalSales = telusSalesBC + telusSalesSK
 
-
-console.log(telusSalesBC)
-console.log(telusSalesSK)
-console.log(telusTotalSales)
-
 function calculateBombardierSales(company) {
   var compSales = 0
   for (var index in company.sales) {
@@ -70,7 +65,7 @@ function calculateBombardierSales(company) {
 
 var bombardierSales = calculateBombardierSales(companySalesData[1])
 
-console.log(bombardierSales)
+
 //
 //function calculateSalesTax(telusBC, telusSK, bombardier, salesTax) {
 //  var salesTaxAB = 0
@@ -86,10 +81,10 @@ console.log(bombardierSales)
 var telusTaxPaidBC = telusSalesBC * salesTaxRates.BC
 var telusTaxPaidSK = telusSalesSK * salesTaxRates.SK
 var telusTotalTaxPaid = telusTaxPaidBC + telusTaxPaidSK
-console.log(telusTotalTaxPaid)
+
 
 var bombardierTaxPaid = bombardierSales * salesTaxRates.AB
-console.log(bombardierTaxPaid)
+
 
 var final = new Object
 final.Telus = new Object
