@@ -26,6 +26,7 @@ var companySalesData = [
   }
 ];
 
+
 function calculateTelusSales(company) {
   var compSales = 0
   for (var index in company.sales){
@@ -89,6 +90,20 @@ console.log(telusTotalTaxPaid)
 
 var bombardierTaxPaid = bombardierSales * salesTaxRates.AB
 console.log(bombardierTaxPaid)
+
+var final = new Object
+final.Telus = new Object
+final.Bombardier = new Object
+
+final.Telus.totalSales = telusTotalSales
+final.Telus.totalTaxes = telusTotalTaxPaid
+final.Bombardier.totalSales = bombardierSales
+final.Bombardier.totalTaxes = bombardierTaxPaid
+
+
+console.log(final)
+
+
 //
 //
 //
